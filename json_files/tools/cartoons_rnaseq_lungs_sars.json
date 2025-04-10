@@ -1,0 +1,38 @@
+{
+  "cartoons":
+    [
+      { "img_id":"t1",
+        "sample":"Low_ricin",
+        "image":"Ricin RNAseq SARS-CoV2-Ricin.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":360
+      },
+      { "img_id":"t2",
+        "sample":"SARSCoV-2",
+        "image":"SARS RNAseq SARS-CoV2-Ricin.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":360
+      },
+
+      { "img_id":"t3",
+      "sample":"SARSCoV-2_ricin",
+      "image":"SARS-Ricin RNAseq SARS-CoV2-Ricin.WEBP",
+      "x":10,
+      "y":10,
+      "width":900,
+      "height":360
+    },
+    { "img_id":"t4",
+    "sample":"Control_healthy",
+    "image":"Control RNAseq SARS-CoV2-Ricin.WEBP",
+    "x":10,
+    "y":10,
+    "width":900,
+    "height":360
+  }
+    ] 
+}

@@ -1,0 +1,21 @@
+{
+  "cartoons":
+    [
+      { "img_id":"t1",
+        "sample":"Control_lung",
+        "image":"Healthy RNAseq ARDS.WEBP",
+        "x":10,
+        "y":10,
+        "width":600,
+        "height":420
+      },
+      { "img_id":"t2",
+        "sample":"LPS_lung",
+        "image":"ARDS RNAseq ARDS.WEBP",
+        "x":10,
+        "y":10,
+        "width":600,
+        "height":420
+      }
+    ] 
+}

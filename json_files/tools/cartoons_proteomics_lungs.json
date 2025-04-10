@@ -1,0 +1,69 @@
+{
+  "cartoons":
+    [
+      { "img_id":"t1",
+        "sample":"Control_Old",
+        "image":"Old Control.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      },
+      { "img_id":"t2",
+        "sample":"LPS_Old",
+        "image":"Old LPS.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      },
+      { "img_id":"t3",
+        "sample":"LPS-4PBA_Old",
+        "image":"Old LPS PBA.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      },
+      { "img_id":"t4",
+        "sample":"4PBA_Old",
+        "image":"Old PBA.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      },
+      { "img_id":"t5",
+        "sample":"Control_Young",
+        "image":"Young Control.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      },
+      { "img_id":"t6",
+        "sample":"LPS_Young",
+        "image":"Young LPS.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      },
+      { "img_id":"t7",
+        "sample":"LPS-4PBA_Young",
+        "image":"Young LPS PBA.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      },
+      { "img_id":"t8",
+        "sample":"4PBA_Young",
+        "image":"Young PBA.WEBP",
+        "x":10,
+        "y":10,
+        "width":900,
+        "height":630
+      }
+    ]
+}

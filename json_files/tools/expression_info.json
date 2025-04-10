@@ -1,0 +1,28 @@
+{
+  "RNA-seq_ARDS_lung.txt": {
+    "link": "https://www.ensembl.org/Mus_musculus_DBA_2J/Gene/Summary?g=query_id",
+    "description": "rna-seq_ARDS.php",
+    "cartoons": "cartoons_rnaseq_lungs_ALI.json"
+  },
+
+  "lungs_proteomics_young-old_scaled_data_v01.txt": {
+    "link": "https://www.ensembl.org/Mus_musculus_DBA_2J/Gene/Summary?g=query_id",
+    "description": "mouse_lungs_proteomics_atlas.php",
+    "cartoons": "cartoons_proteomics_lungs.json"
+  },
+
+  "CP10K_matrix_Ctrl-ARDS_sc_v01.txt": {
+    "link": "https://www.ensembl.org/Mus_musculus_DBA_2J/Gene/Summary?g=query_id",
+    "description": "sc_lung_atlas_description.php",
+    "cartoons": "cartoons_singlecell_lungs.json"
+  },
+
+  "RNA-seq_SARSCOV2_ricin.txt": {
+    "link": "https://www.ensembl.org/Mus_musculus_DBA_2J/Gene/Summary?g=query_id",
+    "description": "rna-seq_sars_ricin.php",
+    "cartoons": "cartoons_rnaseq_lungs_sars.json"
+  }
+
+
+}
+
