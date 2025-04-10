@@ -3,7 +3,7 @@
     [
       { "img_id":"t1",
         "sample":"Control_lung",
-        "image":"Healthy RNAseq ARDS.WEBP",
+        "image":"Healthy RNAseq ARDS.webp",
         "x":10,
         "y":10,
         "width":600,
@@ -11,7 +11,7 @@
       },
       { "img_id":"t2",
         "sample":"LPS_lung",
-        "image":"ARDS RNAseq ARDS.WEBP",
+        "image":"ARDS RNAseq ARDS.webp",
         "x":10,
         "y":10,
         "width":600,
