@@ -1,17 +1,19 @@
 <header>
 <?php include_once realpath("../../../../easy_gdb/header.php");?>
+<?php include_once realpath("../functions/modal.html");?>
+
 </header>
 
 <body>
 <div>
   <a class="float-right margin-20" href="/easy_gdb/help/08_gene_expression.php" target="_blank"><i class='fa fa-info' style='font-size:20px;color:#229dff'></i> Help</a>
 
-    <a onClick="history.back()" class="float-left margin-20" style="cursor: pointer"><i class="fas fa-reply" style="color:#229dff"></i> Back to input</a>
+    <a onClick="history.back()" class="float-left margin-20 cursor-pointer" style="cursor: pointer"><i class="fas fa-reply" style="color:#229dff"></i> Back to input</a>
     <br><br>
     <h1 class="text-center" style="color:#343a40;">Multiomic Reference Atlas Results</h1>
 </div>
 
-<br><div id="loader_main" class="loader"></div>
+<div id="loader_main" class="loader"></div>
 <div id="expression_output" class="margin-20" style="display:none" >
 
   <!-- This message would be displayed when the information in the Json "expression_colors" arrays does not match the size -->
@@ -95,18 +97,7 @@ include_once realpath('../functions/01_expr_load_dataset_description.php');
     color:white;
     /* background-color:#d9bf9e; */
   }
-
-  .circle {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: #ccc;
-    display: inline-block;
-    margin: 5px;
-    margin-left: 15px;
-  }  
-
+  
 </style>
 
 <script>

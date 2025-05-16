@@ -25,7 +25,7 @@
 </html>
 
 <!-- JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> 
+<!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>  -->
 
 <script type="text/javascript">
   var sample_array=[];
@@ -45,4 +45,6 @@
   bar_series[3] = <?php echo json_encode(array_reverse($data4["heatmap"])); ?>;
 </script>
 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.4.0/apexcharts.min.js"></script> -->
+<script src="../functions/apexcharts.min.js"></script> 
 <script src="../functions/bars_graph.js"></script>

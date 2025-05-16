@@ -124,7 +124,7 @@ cartoon_load.forEach(load => {
       var options = {
         series:replicates_all_gene[i][samples_found[i][0]],
         chart: {
-          height: 600,
+          height: 350,
           type: 'scatter',
           zoom: {
             enabled: false,

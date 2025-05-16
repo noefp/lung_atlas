@@ -1,8 +1,8 @@
-
 // This function applies all the features that make up a table such as, filters, pagination and data download buttons in different formats.
 //function ( ids tables, ids button to select rows)
 
 function datatable(table_id,select_id) {
+
 
     if ($(table_id+' thead tr').length < 2) { //if the table has already been deployed before
   
@@ -11,15 +11,7 @@ function datatable(table_id,select_id) {
         $(table_id+' tbody tr').each(function() {
           $(this).prepend('<td><input type="checkbox" class="row-select"></td>');
         });
-  
-        $(document).off('click', '.select-checkbox');
-  
-        $(document).on('click', '.select-checkbox', function() {
-          alert('Checkbox clicado!');
-  
-        });
-  
-  
+    
   // -------------------------------------------------------------------------------------------------------------------------------
   // ------------ column search ----------------------------------------------------------------------------------------------------
         $(table_id+' thead tr').clone(true).appendTo(table_id+' thead');
@@ -62,12 +54,16 @@ function datatable(table_id,select_id) {
                "exportOptions": {
                 "rows": function ( idx, data, node ) {
                   return $(node).find('input.row-select').is(':checked');
+                },
+                  "columns": function (idx, data, node) {
+                    return $(node).is(':visible') && idx !== 0;
                 }
               },
               action: function(e, dt, button, config) {
                 if ($(table_id+' tbody input.row-select:checked').length > 0) {
                   $.fn.dataTable.ext.buttons.copyHtml5.action.call(this, e, dt, button, config);
                 } else {
+                  // showModal("Please select rows to copy.");
                   alert("Please select rows to copy.");
                 }
               }
@@ -77,7 +73,10 @@ function datatable(table_id,select_id) {
               "exportOptions": {
                 "rows": function ( idx, data, node ) {
                   return $(node).find('input.row-select').is(':checked');
-                }
+                },
+                "columns": function (idx, data, node) {
+                  return $(node).is(':visible') && idx !== 0;
+              }
               },
               action: function(e, dt, button, config) {
                 if ($(table_id+' tbody input.row-select:checked').length > 0) {
@@ -92,7 +91,10 @@ function datatable(table_id,select_id) {
               "exportOptions": {
                 "rows": function ( idx, data, node ) {
                   return $(node).find('input.row-select').is(':checked');
-                }
+                },
+                "columns": function (idx, data, node) {
+                  return $(node).is(':visible') && idx !== 0;
+              }
               },
               action: function(e, dt, button, config) {
                 if ($(table_id+' tbody input.row-select:checked').length > 0) {
@@ -110,6 +112,9 @@ function datatable(table_id,select_id) {
                 "rows": function ( idx, data, node ) {
                   return $(node).find('input.row-select').is(':checked');
                 },
+                "columns": function (idx, data, node) {
+                  return $(node).is(':visible') && idx !== 0;
+              }
               },
               action: function(e, dt, button, config) {
                 if ($(table_id+' tbody input.row-select:checked').length > 0) {
@@ -124,7 +129,10 @@ function datatable(table_id,select_id) {
               "exportOptions": {
                 "rows": function ( idx, data, node ) {
                   return $(node).find('input.row-select').is(':checked');
-                }
+                },
+                "columns": function (idx, data, node) {
+                  return $(node).is(':visible') && idx !== 0;
+              }
               },
               action: function(e, dt, button, config) {
                 if ($(table_id+' tbody input.row-select:checked').length > 0) {
@@ -133,14 +141,45 @@ function datatable(table_id,select_id) {
                   alert("Please select rows to print.");
                 }
               }
-            },'colvis'
+            },
+            {
+              extend: 'colvis',
+              // text: 'Columns visivility',
+              columns: ':not(:first-child)', // not allow hiding the first column
+              className: 'colvis-dropdown',
+              prefixButtons: [
+                  {
+                      text: 'Hide all',
+                      action: function (e,dt) {
+                          dt.columns(':not(:first-child)').visible(false); //hides all columns except the first
+                      },
+                      className: 'columns-show',
+                  },
+                  {
+                      text: 'Show all',
+                      action: function (e,dt) {
+                          dt.columns().visible(true); // show all columns
+                      },
+                      className: 'columns-show',
+                  }
+              ]
+          }
+        
           ],
+
+      
         "sScrollX": "100%",
         "sScrollXInner": "110%",
         "bScrollCollapse": true,
         retrieve: true,
         colReorder: true,
-        "drawCallback": function( settings ) {
+        colReorder: {
+          fixedColumnsLeft: 1 // Prevent the first column from rearranging
+      },
+      columnDefs: [
+          { targets: 0, orderable: false, searchable: false }
+      ],
+      "drawCallback": function( settings ) {
       // $('#body').css("display","inline");
       // $(".td-tooltip").tooltip();
       $(".dataTables_filter input").css("border-radius","5px");
@@ -202,3 +241,12 @@ function datatable(table_id,select_id) {
     }
   }
   
+
+// function showModal(message) {
+//   $('#search_input_modal').text(message);
+//   $('#no_gene_modal').modal('show');
+// }
+
+// $('.btn[data-dismiss="modal"]').on('click', function() {
+//   $('#no_gene_modal').modal('hide');
+// });

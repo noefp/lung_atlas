@@ -1,11 +1,11 @@
 <?php include_once realpath("../../../../easy_gdb/header.php");?>
 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
 
 
 <!-- Modal -->
-<div class="modal fade" id="genesNotFoundModal" tabindex="-1" aria-labelledby="genesNotFoundLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="genesNotFoundModal" tabindex="-1" aria-labelledby="genesNotFoundLabel" aria-hidden="true">
   <div class="modal-dialog" >
     <div class="modal-content">
       <div class="modal-header">
@@ -22,7 +22,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <?php
@@ -64,26 +64,26 @@ foreach ($gids as $index => $n) {
 
 if ($not_found_list)
 {
-echo '<div class="alert alert-danger show">
+echo '<div class="alert alert-warning show">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close" title="Close">
   <span aria-hidden="true">&times;</span>
   </button>';
-echo ("<div style=\"text-align: center\"><strong>WARNING:</strong><i> ");
-echo(implode($separator=" , ",$not_found_list)."</i> NOT FOUND !!!"."</div></div>");
+echo ("<div style=\"text-align: center\"><strong>Genes not found:</strong><i> ");
+echo(implode($separator=" , ",$not_found_list)."</i></div></div>");
 
-echo "<script type='text/javascript'>
-        var genesNotFound = " . json_encode($not_found_list) . ";
+// echo "<script type='text/javascript'>
+//         var genesNotFound = " . json_encode($not_found_list) . ";
 
-        var geneListElement = document.getElementById('geneNotFoundList');
-            var listItem = document.createElement('p');
-            listItem.textContent = genesNotFound;
-            geneListElement.appendChild(listItem);
+//         var geneListElement = document.getElementById('geneNotFoundList');
+//             var listItem = document.createElement('p');
+//             listItem.textContent = genesNotFound;
+//             geneListElement.appendChild(listItem);
 
-        // show the modal with gnee lista not founds
-        var myModal = new bootstrap.Modal(document.getElementById('genesNotFoundModal'), {
-            keyboard: false
-        });
-        myModal.show();
-    </script>";
+//         // show the modal with gnee lista not founds
+//         var myModal = new bootstrap.Modal(document.getElementById('genesNotFoundModal'), {
+//             keyboard: false
+//         });
+//         myModal.show();
+//     </script>";
 }
 ?>

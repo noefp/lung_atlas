@@ -1,5 +1,7 @@
 <!-- <header> -->
 <?php include_once realpath("../../../../easy_gdb/header.php");?>
+<?php include_once realpath("../functions/modal.html");?>
+
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 <!-- </header> -->
@@ -54,27 +56,6 @@
 <?php include realpath('../../../../easy_gdb/footer.php'); ?>
 </footer>
 
-<!--  -------------- Modal Error Info popup--------------------------------------------------------------------------------------- -->
-<div class="modal fade" id="no_gene_modal" tabindex="-1" role="dialog" aria-labelledby="genesNotFoundLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content ">
-        <div class="modal-header">
-          <h3 class="modal-title  w-100 text-center" id="genesNotFoundLabel">❌ Error</h3>
-          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
-            <!-- <span aria-hidden="true">&times;</span> -->
-          <!-- </button> -->
-        </div>
-        <div class="modal-body">
-          <div style="text-align: center;">
-            <p id="search_input_modal"></p>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
 <!-- -------------------------------------------------------------------------------------------------------------- -->
 <style>
   
